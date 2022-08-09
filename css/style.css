@@ -1,0 +1,27 @@
+.facefield{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.menufield{
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.absolute{
+    position:absolute;
+}
+
+.relative{
+    position:relative;
+}
+
+.lefteye_position{
+    right: 25%;
+}
+
+.nose_position{
+    right:45%;
+    top:30%;
+}
+
