@@ -16,22 +16,21 @@
     position:relative;
 }
 
-.lefteye_position{
+#leftEye{
     right: 30%;
     top: 20%;
 }
 
-.nose_position{
+#nose{
     right:45%;
     top:30%;
 }
-
-.righteye_position{
+#rightEye{
     left: 5%;
     top: 20%;
 }
 
-.lip_position{
+#lip{
     top: 55%;
     right: 45%;
 
