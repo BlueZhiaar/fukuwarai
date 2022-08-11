@@ -12,13 +12,13 @@ class Face {
     }
 }
     //imgの相対パスを定数に格納
-    const faceContour_url = './images/faceContour.svg';
+    const faceContour_url = './images/hanako_rinkaku.svg';
     //const leftEye_url = './images/leftEye.svg';
-    const leftEye_cut_url = './images/lefteye_cut.svg';
-    const lip_url = './images/lip.svg';
+    const leftEye_cut_url = './images/hanako_lefteye_cut.svg';
+    const lip_url = './images/hanako_lip_cut.svg';
     //const nose_url = './images/nose.svg';
-    const nose_cut_url = './images/nose_cut.svg';
-    const rightEye_url = './images/rightEye.svg';
+    const nose_cut_url = './images/hanako_nose_cut.svg';
+    const rightEye_url = './images/hanako_righteye_cut.svg';
 
    
 
@@ -30,21 +30,21 @@ class Face {
     
     //TODO create_element関数を作る。
 
-    const faceContour = create_element('object','faceContour','absolute','',faceContour_url);
+    const faceContour = create_element('object','faceContour','absolute image-fluid','',faceContour_url);
     faceArea.appendChild(faceContour);
 
-    const leftEyeCut = create_element('object','leftEye','absolute lefteye_position','',leftEye_cut_url);
+    const leftEyeCut = create_element('object','leftEye','absolute image-fluid lefteye_position','',leftEye_cut_url);
     faceArea.appendChild(leftEyeCut);
     
-    const noseCut = create_element('object','nose','absolute nose_position','',nose_cut_url);
+    const noseCut = create_element('object','nose','absolute image-fluid nose_position','',nose_cut_url);
     faceArea.appendChild(noseCut);
     //const leftEye = create_element('object','leftEye','absolute','',leftEye_url);
     //faceArea.appendChild(leftEye);
 
-    const rightEye = create_element('object','rightEye','absolute','',rightEye_url);
+    const rightEye = create_element('object','rightEye','absolute image-fluid righteye_position','',rightEye_url);
     faceArea.appendChild(rightEye);
 
-    const lip = create_element('object','lip','absolute','',lip_url);
+    const lip = create_element('object','lip','absolute image-fluid lip_position','',lip_url);
     faceArea.appendChild(lip);
 
     //const nose = create_element('object','nose','absolute','',nose_url);

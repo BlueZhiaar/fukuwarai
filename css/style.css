@@ -17,11 +17,23 @@
 }
 
 .lefteye_position{
-    right: 25%;
+    right: 30%;
+    top: 20%;
 }
 
 .nose_position{
     right:45%;
     top:30%;
+}
+
+.righteye_position{
+    left: 5%;
+    top: 20%;
+}
+
+.lip_position{
+    top: 55%;
+    right: 45%;
+
 }
 
