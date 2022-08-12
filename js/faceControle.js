@@ -46,6 +46,8 @@ class Face {
     const lip = create_element('object','lip','absolute image-fluid','',lip_url);
     faceArea.appendChild(lip);
 
+    //id=['faceContour','leftEye','nose','rightEye','lip']
+
     //TODO IDを配列に入れて誤答するとIDを書き換えることによってパーツをずらす
 
     //const nose = create_element('object','nose','absolute','',nose_url);
