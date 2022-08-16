@@ -33,6 +33,8 @@ makeTurukameButton.onclick = function () {
     turukameArea.appendChild(inputArea);
     const answerButton = create_element('button', 'input_area', 'answer_button', '解答する', '');
     turukameArea.appendChild(answerButton);
+    const retryButton = create_element('button','','retry_button','再挑戦する','');
+        turukameArea.appendChild(retryButton);
 
     //ボタンを押した回数
     let clickButtonNum = 0;
@@ -43,9 +45,11 @@ makeTurukameButton.onclick = function () {
        const button = document.getElementById('answer_button');
        if(clickButtonNum > 0){
         button.disabled = true;
+        
+        //TODO 再チャレンジボタンを作る
+        //TODO 再読み込みwindow.location.reload();
        }
 
-       //TODO 再チャレンジ用のボタンを作る
         
         
         clickButtonNum = clickButtonNum + 1;
@@ -103,6 +107,10 @@ makeTurukameButton.onclick = function () {
             console.log('不正解');
             
         }
+    }
+
+    retryButton.onclick = function(){
+       makeTurukameButton.onclick();
     }
 
 

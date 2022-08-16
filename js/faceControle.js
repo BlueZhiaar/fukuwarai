@@ -13,10 +13,8 @@ class Face {
 }
     //imgの相対パスを定数に格納
     const faceContour_url = './images/hanako_rinkaku.svg';
-    //const leftEye_url = './images/leftEye.svg';
     const leftEye_cut_url = './images/hanako_lefteye_cut.svg';
     const lip_url = './images/hanako_lip_cut.svg';
-    //const nose_url = './images/nose.svg';
     const nose_cut_url = './images/hanako_nose_cut.svg';
     const rightEye_url = './images/hanako_righteye_cut.svg';
 
@@ -27,24 +25,30 @@ class Face {
     //顔エリアをまっさらにする
     const faceArea = document.getElementById('face_area');
     faceArea.innerText = '';
+
+    //説明文を入れる
+    const descriptionSentence = '福笑いに挑戦して鶴亀算を解いてください。正解かどうかで顔が変わります。';
+    const p = create_element('p','description','',descriptionSentence,'');
+    faceArea.appendChild(p);
     
 
     const faceContour = create_element('object','faceContour','absolute image-fluid','',faceContour_url);
     faceArea.appendChild(faceContour);
+
+    /*
 
     const leftEyeCut = create_element('object','leftEye','absolute image-fluid','',leftEye_cut_url);
     faceArea.appendChild(leftEyeCut);
     
     const noseCut = create_element('object','nose','absolute image-fluid','',nose_cut_url);
     faceArea.appendChild(noseCut);
-    //const leftEye = create_element('object','leftEye','absolute','',leftEye_url);
-    //faceArea.appendChild(leftEye);
-
+    
     const rightEye = create_element('object','rightEye','absolute image-fluid','',rightEye_url);
     faceArea.appendChild(rightEye);
 
     const lip = create_element('object','lip','absolute image-fluid','',lip_url);
     faceArea.appendChild(lip);
+    */
 
     //id=['faceContour','leftEye','nose','rightEye','lip']
 
