@@ -44,6 +44,7 @@ makeTurukameButton.onclick = function () {
         //一回入力したらボタンが無効になる
        const button = document.getElementById('answer_button');
        if(clickButtonNum > 0){
+        alert('再挑戦する場合は再挑戦するボタンを押してください。');
         button.disabled = true;
         
         //TODO 再チャレンジボタンを作る
