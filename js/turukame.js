@@ -33,33 +33,47 @@ makeTurukameButton.onclick = function () {
     turukameArea.appendChild(inputArea);
     const answerButton = create_element('button', 'input_area', 'answer_button', '解答する', '');
     turukameArea.appendChild(answerButton);
-    const retryButton = create_element('button','','retry_button','再挑戦する','');
-        turukameArea.appendChild(retryButton);
+    const retryButton = create_element('button', '', 'retry_button', '再挑戦する', '');
+    turukameArea.appendChild(retryButton);
 
     //ボタンを押した回数
     let clickButtonNum = 0;
-    
+
     answerButton.onclick = function () {
+        //入力無しにボタンを押されたらアラートを出す
 
+        if(inputArea.value==='' || !(inputArea.value.match(/^[0-9]*$/))){
+            alert('半角数字を入力してから解答ボタンを押してください。');
+            return;
+        }
         //一回入力したらボタンが無効になる
-       const button = document.getElementById('answer_button');
-       if(clickButtonNum > 0){
-        alert('再挑戦する場合は再挑戦するボタンを押してください。');
-        button.disabled = true;
-        
-        //TODO 再チャレンジボタンを作る
-        //TODO 再読み込みwindow.location.reload();
-       }
+        const button = document.getElementById('answer_button');
 
-        
-        
+
+        if (clickButtonNum > 0) {
+            alert('再挑戦する場合は再挑戦するボタンを押してください。');
+            button.disabled = true;
+
+            //TODO 再チャレンジボタンを作る
+            //TODO 再読み込みwindow.location.reload();
+
+            //解答すると説明が消えてしまうので消えないようにする
+        }
+
+
+
         clickButtonNum = clickButtonNum + 1;
-        
 
+        
         if (parseInt(inputArea.value) === parseInt(turukameObject.turu)) {
 
             //一度入力したらやり直しボタンを押さないと入力できないようにする
             faceAreaSecond.innerText = '';
+
+            //説明文を入れる
+            const descriptionSentence = '福笑いに挑戦して鶴亀算を解いてください。正解かどうかで顔が変わります。';
+            const p = create_element('p', 'description', '', descriptionSentence, '');
+            faceArea.appendChild(p);
             const seikai = create_element('h1', 'seikai', '', '正解', '');
             turukameArea.appendChild(seikai);
             console.log('正解');
@@ -77,16 +91,16 @@ makeTurukameButton.onclick = function () {
 
             const lip2 = create_element('object', 'lip', 'absolute image-fluid', '', lip_url);
             faceAreaSecond.appendChild(lip2);
-            
+
         } else {
 
             let wn = parseInt(turukameObject.turu) - parseInt(inputArea.value);
 
             console.log(`wn=${wn}`);
-            let brokenArray = returnBrokenArray(['leftEye','nose','rightEye','lip'],wn);
+            let brokenArray = returnBrokenArray(['leftEye', 'nose', 'rightEye', 'lip'], wn);
 
             faceAreaSecond.innerText = '';
-            
+
             const faceContour2 = create_element('object', 'FaceCountour', 'absolute image-fluid', '', faceContour_url);
             faceAreaSecond.appendChild(faceContour2);
 
@@ -106,12 +120,12 @@ makeTurukameButton.onclick = function () {
             const huseikai = create_element('h1', 'huseikai', '', '不正解', '');
             turukameArea.appendChild(huseikai);
             console.log('不正解');
-            
+
         }
     }
 
-    retryButton.onclick = function(){
-       makeTurukameButton.onclick();
+    retryButton.onclick = function () {
+        makeTurukameButton.onclick();
     }
 
 
@@ -159,12 +173,12 @@ class TuruAndKame {
 //id=['faceContour','leftEye','nose','rightEye','lip']
 
 //配列とintを引数にして引数の数だけずれた配列を返す。回って前と同じ配列になった場合は一つずらす
-function returnBrokenArray(arr=['leftEye','nose','rightEye','lip'],wrong_num) {
+function returnBrokenArray(arr = ['leftEye', 'nose', 'rightEye', 'lip'], wrong_num) {
     //全パターン手入力でいいじゃない
     let change_num = Math.abs(wrong_num) % arr.length;
 
     if (change_num === 1) {
-        return ['nose','lip','leftEye','rightEye'];
+        return ['nose', 'lip', 'leftEye', 'rightEye'];
     } else if (change_num === 2) {
         return ['nose', 'rightEye', 'lip', 'leftEye'];
     } else if (change_num === 3) {
