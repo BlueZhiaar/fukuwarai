@@ -73,23 +73,23 @@ makeTurukameButton.onclick = function () {
             //説明文を入れる
             const descriptionSentence = '福笑いに挑戦して鶴亀算を解いてください。正解かどうかで顔が変わります。';
             const p = create_element('p', 'description', '', descriptionSentence, '');
-            faceArea.appendChild(p);
+            faceAreaSecond.appendChild(p);
             const seikai = create_element('h1', 'seikai', '', '正解', '');
             turukameArea.appendChild(seikai);
             console.log('正解');
-            const faceContour2 = create_element('object', 'faceContour', 'absolute image-fluid', '', faceContour_url);
+            const faceContour2 = create_element('object', 'faceContour', 'absolute imag-responsive', '', faceContour_url);
             faceAreaSecond.appendChild(faceContour2);
 
-            const leftEyeCut2 = create_element('object', 'leftEye', 'absolute image-fluid', '', leftEye_cut_url);
+            const leftEyeCut2 = create_element('object', 'leftEye', 'absolute imag-responsive', '', leftEye_cut_url);
             faceAreaSecond.appendChild(leftEyeCut2);
 
-            const noseCut2 = create_element('object', 'nose', 'absolute image-fluid', '', nose_cut_url);
+            const noseCut2 = create_element('object', 'nose', 'absolute imag-responsive', '', nose_cut_url);
             faceAreaSecond.appendChild(noseCut2);
 
-            const rightEye2 = create_element('object', 'rightEye', 'absolute image-fluid', '', rightEye_url);
+            const rightEye2 = create_element('object', 'rightEye', 'absolute imag-responsive', '', rightEye_url);
             faceAreaSecond.appendChild(rightEye2);
 
-            const lip2 = create_element('object', 'lip', 'absolute image-fluid', '', lip_url);
+            const lip2 = create_element('object', 'lip', 'absolute imag-responsive', '', lip_url);
             faceAreaSecond.appendChild(lip2);
 
         } else {

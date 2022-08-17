@@ -32,7 +32,7 @@ class Face {
     faceArea.appendChild(p);
     
 
-    const faceContour = create_element('object','faceContour','absolute image-fluid','',faceContour_url);
+    const faceContour = create_element('object','faceContour','absolute imag-responsive','',faceContour_url);
     faceArea.appendChild(faceContour);
 
     /*
