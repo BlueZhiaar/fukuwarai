@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>DXふくわらい</title>
+
+<head prefix=”og:http://ogp.me/ns#”>
+  <meta property="og:url" content="https://bluezhiaar.github.io/fukuwarai/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DXふくわらい" />
+  <meta property="og:description" content="鶴亀算を解いて福笑いができます。" />
+  <meta property="og:site_name" content="DXふくわらい" />
+  <meta property="og:image" content="https://bluezhiaar.github.io/fukuwarai/images/ogp_fukuwarai.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>DXふくわらい</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">DXふくわらい</a>
-          </div>
-        </nav>
-      </header>
-      <div class="d-flex flex-row align-items-strech container-fluid border p-1 m-1" style="height: 90vh;">
-        <div class="col-7 border p-1 m-1 relative" id="face_area" style="height: 90vh;">
-        </div>
-        <div class="col border p-1 m-1" id="turukame_area" style="height: 90vh;">アイテム2</div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">DXふくわらい</a>
       </div>
-    <script src="js/faceControle.js"></script>
-    <script src="js/modules.js"></script>
+    </nav>
+  </header>
+  <div class="d-flex flex-row align-items-strech container-fluid border p-1 m-1 bg-danger" style="height: 90vh;">
+    <div class="col-7 border p-1 m-1 relative bg-light" id="face_area" style="height: 90vh;">
+    </div>
+    <div class="col border p-1 m-1 bg-dark" id="turukame_area" style="height: 90vh;">アイテム2</div>
+  </div>
+  <script src="js/faceControle.js"></script>
+  <script src="js/modules.js"></script>
 </body>
+
 </html>

@@ -10,11 +10,12 @@ turukameArea.innerText = '';
 
 const faceAreaSecond = document.getElementById('face_area');
 
-const makeTurukameButton = create_element('button', 'make_turukame_button', 'btn btn-info btn-lg absolute', '福笑いに挑戦する', '');
+const makeTurukameButton = create_element('button', 'make_turukame_button', 'btn btn-danger btn-lg text-dark absolute', '福笑いに挑戦する', '');
 turukameArea.appendChild(makeTurukameButton);
 
 makeTurukameButton.onclick = function () {
     turukameArea.innerText = '';
+    //faceAreaSecond.innerText = '';
     let turukameObject = new TuruAndKame();
     //問題文の表示
     //解答入力欄の表示
@@ -25,7 +26,7 @@ makeTurukameButton.onclick = function () {
     //console.log(turukameObject.turu);
 
     let questionSentence = turukameObject.returnQuestionSentence();
-    const turukameQuestion = create_element('p', 'turukame_question', '', questionSentence, '');
+    const turukameQuestion = create_element('p', 'turukame_question', 'text-light', questionSentence, '');
 
     turukameArea.appendChild(turukameQuestion);
 
@@ -74,7 +75,7 @@ makeTurukameButton.onclick = function () {
             const descriptionSentence = '福笑いに挑戦して鶴亀算を解いてください。正解かどうかで顔が変わります。';
             const p = create_element('p', 'description', '', descriptionSentence, '');
             faceAreaSecond.appendChild(p);
-            const seikai = create_element('h1', 'seikai', '', '正解', '');
+            const seikai = create_element('h1', 'seikai', 'text-light', '正解', '');
             turukameArea.appendChild(seikai);
             //console.log('正解');
             const faceContour2 = create_element('object', 'faceContour', 'absolute img-responsive', '', faceContour_url);
@@ -117,7 +118,7 @@ makeTurukameButton.onclick = function () {
             faceAreaSecond.appendChild(lip2);
 
 
-            const huseikai = create_element('h1', 'huseikai', '', '不正解', '');
+            const huseikai = create_element('h1', 'huseikai', 'text-light', '不正解', '');
             turukameArea.appendChild(huseikai);
             //console.log('不正解');
 
