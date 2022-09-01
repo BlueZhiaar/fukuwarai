@@ -22,7 +22,7 @@ makeTurukameButton.onclick = function () {
     turukameObject.each_limit = 5;
     turukameObject.setNumbers();
     //テスト用コード
-    console.log(turukameObject.turu);
+    //console.log(turukameObject.turu);
 
     let questionSentence = turukameObject.returnQuestionSentence();
     const turukameQuestion = create_element('p', 'turukame_question', '', questionSentence, '');
@@ -76,7 +76,7 @@ makeTurukameButton.onclick = function () {
             faceAreaSecond.appendChild(p);
             const seikai = create_element('h1', 'seikai', '', '正解', '');
             turukameArea.appendChild(seikai);
-            console.log('正解');
+            //console.log('正解');
             const faceContour2 = create_element('object', 'faceContour', 'absolute img-responsive', '', faceContour_url);
             faceAreaSecond.appendChild(faceContour2);
 
@@ -96,7 +96,7 @@ makeTurukameButton.onclick = function () {
 
             let wn = parseInt(turukameObject.turu) - parseInt(inputArea.value);
 
-            console.log(`wn=${wn}`);
+            //console.log(`wn=${wn}`);
             let brokenArray = returnBrokenArray(['leftEye', 'nose', 'rightEye', 'lip'], wn);
 
             faceAreaSecond.innerText = '';
@@ -119,7 +119,7 @@ makeTurukameButton.onclick = function () {
 
             const huseikai = create_element('h1', 'huseikai', '', '不正解', '');
             turukameArea.appendChild(huseikai);
-            console.log('不正解');
+            //console.log('不正解');
 
         }
     }
