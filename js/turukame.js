@@ -77,19 +77,19 @@ makeTurukameButton.onclick = function () {
             const seikai = create_element('h1', 'seikai', '', '正解', '');
             turukameArea.appendChild(seikai);
             console.log('正解');
-            const faceContour2 = create_element('object', 'faceContour', 'absolute imag-responsive', '', faceContour_url);
+            const faceContour2 = create_element('object', 'faceContour', 'absolute img-responsive', '', faceContour_url);
             faceAreaSecond.appendChild(faceContour2);
 
-            const leftEyeCut2 = create_element('object', 'leftEye', 'absolute imag-responsive', '', leftEye_cut_url);
+            const leftEyeCut2 = create_element('object', 'leftEye', 'absolute img-responsive', '', leftEye_cut_url);
             faceAreaSecond.appendChild(leftEyeCut2);
 
-            const noseCut2 = create_element('object', 'nose', 'absolute imag-responsive', '', nose_cut_url);
+            const noseCut2 = create_element('object', 'nose', 'absolute img-responsive', '', nose_cut_url);
             faceAreaSecond.appendChild(noseCut2);
 
-            const rightEye2 = create_element('object', 'rightEye', 'absolute imag-responsive', '', rightEye_url);
+            const rightEye2 = create_element('object', 'rightEye', 'absolute img-responsive', '', rightEye_url);
             faceAreaSecond.appendChild(rightEye2);
 
-            const lip2 = create_element('object', 'lip', 'absolute imag-responsive', '', lip_url);
+            const lip2 = create_element('object', 'lip', 'absolute img-responsive', '', lip_url);
             faceAreaSecond.appendChild(lip2);
 
         } else {
