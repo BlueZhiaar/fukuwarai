@@ -23,7 +23,7 @@ makeTurukameButton.onclick = function () {
     turukameObject.each_limit = 5;
     turukameObject.setNumbers();
     //テスト用コード
-    //console.log(turukameObject.turu);
+    console.log(turukameObject.turu);
 
     let questionSentence = turukameObject.returnQuestionSentence();
     const turukameQuestion = create_element('p', 'turukame_question', 'text-light', questionSentence, '');
@@ -80,9 +80,14 @@ makeTurukameButton.onclick = function () {
             //console.log('正解');
             const faceContour2 = create_element('object', 'faceContour', 'absolute img-responsive', '', faceContour_url);
             faceAreaSecond.appendChild(faceContour2);
+            const rinkakuDiv = create_element('div','rinkakuDiv', 'absolute img-responsive', '', faceContour_url);
+            faceAreaSecond.appendChild(rinkakuDiv);
 
+
+            const rinkaku = document.getElementById('rinkakuDiv');
             const leftEyeCut2 = create_element('object', 'leftEye', 'absolute img-responsive', '', leftEye_cut_url);
             faceAreaSecond.appendChild(leftEyeCut2);
+            //rinkaku.appendChild(leftEyeCut2);
 
             const noseCut2 = create_element('object', 'nose', 'absolute img-responsive', '', nose_cut_url);
             faceAreaSecond.appendChild(noseCut2);
