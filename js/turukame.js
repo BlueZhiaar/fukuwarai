@@ -80,14 +80,12 @@ makeTurukameButton.onclick = function () {
             //console.log('正解');
             const faceContour2 = create_element('object', 'faceContour', 'absolute img-responsive', '', faceContour_url);
             faceAreaSecond.appendChild(faceContour2);
-            const rinkakuDiv = create_element('div','rinkakuDiv', 'absolute img-responsive', '', faceContour_url);
-            faceAreaSecond.appendChild(rinkakuDiv);
-
-
-            const rinkaku = document.getElementById('rinkakuDiv');
+            const faceContourObject = document.getElementById('faceContour');
+            
             const leftEyeCut2 = create_element('object', 'leftEye', 'absolute img-responsive', '', leftEye_cut_url);
             faceAreaSecond.appendChild(leftEyeCut2);
-            //rinkaku.appendChild(leftEyeCut2);
+            //faceContourObject.appendChild(leftEyeCut2);
+            
 
             const noseCut2 = create_element('object', 'nose', 'absolute img-responsive', '', nose_cut_url);
             faceAreaSecond.appendChild(noseCut2);

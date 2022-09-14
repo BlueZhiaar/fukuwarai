@@ -9,7 +9,7 @@
  * @param {str} inner_text
  * @return {obj} HTM要素を返す
  */
- function create_element(tag,id_name='',class_name='',inner_text='',data=''){
+ function create_element(tag,id_name='',class_name='',inner_text='',data='',src='',style=''){
     const el = document.createElement(tag);
     if(id_name){
         el.id = id_name;
@@ -22,6 +22,33 @@
     }
     if(data){
         el.data = data;
+    }
+    if(src){
+        el.src = src;
+    }
+    if(style){
+        el.style = style;
+    }
+
+    return el;
+}
+
+function create_img(tag,id_name='',width='',height='',class_name='',src=''){
+    const el = document.createElement(tag);
+    if(id_name){
+        el.id = id_name;
+    }
+    if(width){
+        el.width = width;
+    }
+    if(height){
+        el.height = height;
+    }
+    if(class_name){
+        el.className = class_name;
+    }
+    if(src){
+        el.src = src;
     }
 
     return el;

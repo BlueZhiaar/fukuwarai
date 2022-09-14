@@ -18,6 +18,8 @@ class Face {
     const nose_cut_url = './images/hanako_nose_cut.svg';
     const rightEye_url = './images/hanako_righteye_cut.svg';
 
+    
+
    
 
    
@@ -25,6 +27,8 @@ class Face {
     //顔エリアをまっさらにする
     const faceArea = document.getElementById('face_area');
     faceArea.innerText = '';
+
+
 
     //説明文を入れる
     const descriptionSentence = '福笑いに挑戦して鶴亀算を解いてください。正解かどうかで顔が変わります。';
@@ -34,6 +38,15 @@ class Face {
 
     const faceContour = create_element('object','faceContour','absolute img-responsive','',faceContour_url);
     faceArea.appendChild(faceContour);
+
+    //輪郭のサイズを定数に格納
+    const faceContourImg = document.getElementById('faceContour');
+    const faceContourWidth = faceContourImg.clientWidth;
+    console.log(faceContourWidth);
+
+    //const faceTest = create_img('img','rinkaku','800px;','800px;','',faceContour_url);
+    //console.log(faceTest);
+    //faceArea.appendChild(faceTest);
 
     /*
 
