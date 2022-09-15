@@ -78,23 +78,38 @@ makeTurukameButton.onclick = function () {
             const seikai = create_element('h1', 'seikai', 'text-light', '正解', '');
             turukameArea.appendChild(seikai);
             //console.log('正解');
-            const faceContour2 = create_element('object', 'faceContour', 'absolute img-responsive', '', faceContour_url);
+            
+            
+
+            const faceContour2 = create_element('object', 'faceContour', '', '', faceContour_url);
             faceAreaSecond.appendChild(faceContour2);
-            const faceContourObject = document.getElementById('faceContour');
-            
-            const leftEyeCut2 = create_element('object', 'leftEye', 'absolute img-responsive', '', leftEye_cut_url);
-            faceAreaSecond.appendChild(leftEyeCut2);
-            //faceContourObject.appendChild(leftEyeCut2);
+
+
             
 
-            const noseCut2 = create_element('object', 'nose', 'absolute img-responsive', '', nose_cut_url);
-            faceAreaSecond.appendChild(noseCut2);
+            const kijun = document.getElementById('faceContour');
 
-            const rightEye2 = create_element('object', 'rightEye', 'absolute img-responsive', '', rightEye_url);
-            faceAreaSecond.appendChild(rightEye2);
+            const rightEye2 = create_element('object', 'rightEye', 'absolute', '', rightEye_url);
+            //faceAreaSecond.appendChild(rightEye2);
+            kijun.appendChild(rightEye2);
+            
+            
+            const leftEyeCut2 = create_element('object', 'leftEye', 'absolute', '',leftEye_cut_url);
+            //faceAreaSecond.appendChild(leftEyeCut2);
+            kijun.appendChild(leftEyeCut2);
 
-            const lip2 = create_element('object', 'lip', 'absolute img-responsive', '', lip_url);
-            faceAreaSecond.appendChild(lip2);
+            
+            
+
+            const noseCut2 = create_element('object', 'nose', 'absolute', '', nose_cut_url);
+            //faceAreaSecond.appendChild(noseCut2);
+            kijun.appendChild(noseCut2);
+
+            
+
+            const lip2 = create_element('object', 'lip', 'absolute', '', lip_url);
+            //faceAreaSecond.appendChild(lip2);
+            kijun.appendChild(lip2);
 
         } else {
 
